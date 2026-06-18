@@ -82,6 +82,32 @@ height:75px;
 
 }
 
+.dark{
+
+background:#111827;
+color:white;
+
+}
+
+.dark header{
+
+background:#1F2937;
+
+}
+
+.dark .card{
+
+background:#1F2937;
+color:white;
+
+}
+
+.dark footer{
+
+background:black;
+
+}  
+
 .logo{
 
 font-size:28px;
@@ -327,8 +353,45 @@ order:-1;
 width:280px;
 
 }
+  
 
-}
+#topBtn{
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#0F766E;
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+box-shadow:0 10px 20px rgba(0,0,0,.25);
+
+}  
+
+.card:hover{
+
+transform:translateY(-10px) scale(1.03);
+
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}  
+
+}  
 
 </style>
 
@@ -365,6 +428,10 @@ Home<span>Picks</span>
 Explore
 
 </a>
+
+<button id="themeBtn" class="btn">
+🌙
+</button>  
 
 </nav>
 
@@ -472,6 +539,129 @@ Popular Categories
 
 </section>
 
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Featured Buying Guides
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h2>🔥</h2>
+<h3>Best Air Fryers in India</h3>
+<p>Top 10 air fryers compared with pros & cons.</p>
+<a href="#" class="btn">Read Guide</a>
+</div>
+
+<div class="card">
+<h2>💧</h2>
+<h3>Best Water Purifiers</h3>
+<p>RO vs UV vs UF buying guide.</p>
+<a href="#" class="btn">Read Guide</a>
+</div>
+
+<div class="card">
+<h2>☕</h2>
+<h3>Best Mixer Grinders</h3>
+<p>Best options under ₹5000.</p>
+<a href="#" class="btn">Read Guide</a>
+</div>
+
+</div>
+
+</div>
+
+</section>  
+
+<section class="section" style="background:white;">
+
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
+<h1>100+</h1>
+<p>Buying Guides</p>
+</div>
+
+<div class="card">
+<h1>500+</h1>
+<p>Products Reviewed</p>
+</div>
+
+<div class="card">
+<h1>10K+</h1>
+<p>Monthly Readers</p>
+</div>
+
+<div class="card">
+<h1>100%</h1>
+<p>Honest Reviews</p>
+</div>
+
+</div>
+
+</div>
+
+</section>  
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Why Home Picks India?
+</h2>
+
+<p style="max-width:850px;margin:auto;text-align:center;font-size:18px;line-height:2;color:#555;">
+
+We help Indian shoppers choose the best Home, Kitchen and Smart products through honest reviews, buying guides and comparisons.
+
+No fake promises.
+
+No sponsored rankings.
+
+Only genuine recommendations.
+
+</p>
+
+</div>
+
+</section>  
+
+<section class="section">
+
+<div class="container">
+
+<div class="card" style="text-align:center;padding:60px;">
+
+<h2>Join Our Newsletter</h2>
+
+<p style="margin:20px 0;">
+Get latest buying guides directly in your inbox.
+</p>
+
+<div class="search-box">
+
+<input type="email" placeholder="Enter Email">
+
+<button>
+
+Subscribe
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>  
+
 <footer>
 
 <div class="container">
@@ -502,7 +692,34 @@ Helping Indians Buy Better Products ❤️
 
 console.log("Home Picks India Loaded");
 
+const btn=document.getElementById("themeBtn");
+
+btn.onclick=()=>{
+
+document.body.classList.toggle("dark");
+
+  
+}  
+  
+document.getElementById("topBtn").onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
+
 </script>
+
+<button id="topBtn">
+
+⬆
+
+</button>  
 
 </body>
 
